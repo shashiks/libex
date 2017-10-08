@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RadioGroup
+        android:id="@+id/searchOptions"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:checkedButton="@+id/optIsbn"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/optIsbn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Search By ISBN"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/optDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="11dp"
+            android:text="Search By Details"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/pnlDetailSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="invisible">
+
+
+        <EditText
+            android:id="@+id/txtSearchAuhtorName"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:maxLines="1"
+            android:text="kazuo ishiguro"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/background_light"
+            android:hint="Author"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/lblSearchAuthorName"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/txtSearchAuhtorName"
+            android:gravity="center"
+            android:drawableRight="@drawable/scan"
+            />
+
+        <EditText
+            android:id="@+id/txtSearchTitle"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txtSearchAuhtorName"
+            android:maxLines="1"
+            android:text="never let me go"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/background_light"
+            android:hint="Book Title"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/lblSearchTitle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/txtSearchTitle"
+            android:layout_below="@+id/lblSearchAuthorName"
+            android:gravity="center"
+            android:drawableRight="@drawable/scan"
+            />
+
+        <Button
+            android:id="@+id/btnSearchByDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtSearchTitle"
+            android:layout_marginTop="30dp"
+            android:elevation="4dp"
+            android:text="Get Book Details"
+            android:textColor="@color/primary" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pnlIsbnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/txtSearchIsbn"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="151dp"
+            android:hint="ISBN"
+            android:maxLines="1"
+            android:text="9780963270702"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/lblSearchIsbn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/txtSearchIsbn"
+            android:layout_toEndOf="@+id/txtSearchIsbn"
+            android:gravity="center"
+            android:drawableRight="@drawable/scan"
+        />
+
+        <Button
+            android:id="@+id/btnSearchByIsbn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lblSearchIsbn"
+            android:layout_marginTop="27dp"
+            android:elevation="4dp"
+            android:text="Get Book Details"
+            android:textColor="@color/primary" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pBarSearchByDetails"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

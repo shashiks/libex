@@ -1,0 +1,14 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list"
+    style="@style/Widget.AppCompat.Light.ListView.DropDown"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:divider="@color/secondary_text"
+    android:headerDividersEnabled="false"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll"
+     />
+<!-- android:entries="@array/categories"-->
+

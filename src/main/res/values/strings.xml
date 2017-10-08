@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Libex</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="publish_year">Year of Publishing</string>
+    <string name="publisher">Publisher</string>
+    <string name="num_pages">Pages</string>
+    <string name="rating">Rating</string>
+    <string name="isbn">ISBN</string>
+    <string name="short_desc">Short Description</string>
+    <string name="location">Shelf Location</string>
+    <string name="google_book_api_url">https://www.googleapis.com/books/v1/volumes?fields=totalItems,items(volumeInfo(title,authors,publisher,publishedDate,industryIdentifiers(identifier),pageCount,averageRating,categories,imageLinks(smallThumbnail)))</string>
+    <string name="google_api_isbn_param">q=isbn:@BOOK_ISBN@</string>
+    <string name="google_api_title_author_param">q=intitle:@BOOK_TITLE@+inauthor:@BOOK_AUTHOR@</string>
+    <string name="google_api_max_result_param">maxResults=1</string>
+    <integer name="bookSearchLimit">-1</integer>
+    <!-- isbndb.com's API key
+    <string name="isbn_api_key">KLOHWOST</string>
+     -->
+
+    <string-array name="categories">
+        <item>Fiction</item>
+        <item>Travel</item>
+        <item>History</item>
+        <item>Short Stories</item>
+        <item>Philosophy</item>
+    </string-array>
+   <string name="action_settings">Settings</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Add Book</item>
+        <item>Lend</item>
+        <item>Search</item>
+    </string-array>
+
+
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Ocr dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Ocr Detector Sample</string>
+    <string name="ocr_header">Click &quot;Detect Text&quot; to detect text</string>
+    <string name="read_text">Detect Text</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="ocr_success">Text read successfully</string>
+    <string name="ocr_failure">No text captured</string>
+    <string name="ocr_error">"Error reading text: %1$s"</string>
+
+</resources>
